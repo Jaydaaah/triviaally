@@ -3,6 +3,7 @@ import { useUserAccount } from "../../../context/UserAccount/Hooks/useUserAccoun
 import ScreenTemplate from "../ScreenTemplate";
 import { useCallback } from "react";
 import ThemeSelector from "./ThemeSelector";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Profile() {
     const { username, logout } = useUserAccount();
@@ -46,15 +47,21 @@ export default function Profile() {
                     className="avatar mask mask-hexagon-2 drop-shadow self-center absolute"
                 >
                     <div className="w-32 h-32 rounded-full">
-                        <img src="/blank-dp.png" />
+                        <LazyLoadImage
+                            loading="lazy"
+                            draggable={false}
+                            src="/triviaally/blank-dp.png"
+                        />
                     </div>
                 </motion.div>
             </div>
             <span className="self-center font-serif text-2xl">Hi, there</span>
-            <span className="self-center font-bold font-serif text-3xl">{username?.name}</span>
+            <span className="self-center font-bold font-serif text-3xl">
+                {username?.name}
+            </span>
             <div className="divider"></div>
             <div className="flex-grow flex flex-col gap-2">
-                <ThemeSelector className="self-center"/>
+                <ThemeSelector className="self-center" />
                 <ul className="menu w-full h-full bg-base-100 rounded-box gap-2">
                     <li>
                         <a onClick={btnHandler}>LogOut</a>
