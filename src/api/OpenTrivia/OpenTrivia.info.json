@@ -1,0 +1,167 @@
+{
+    "Categories": [
+        {
+            "id": 9,
+            "name": "General Knowledge",
+            "gradient": "bg-blue-to-purple",
+            "description": "A mix of trivia from various fields.",
+            "src": "/category/computer.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Entertainment: Books",
+            "gradient": "bg-pink-to-orange",
+            "description": "Questions about literature and authors.",
+            "src": "/category/books.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Entertainment: Film",
+            "gradient": "bg-teal-to-blue",
+            "description": "Trivia about movies and directors.",
+            "src": "/category/film.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Entertainment: Music",
+            "gradient": "bg-red-to-yellow",
+            "description": "Questions on music genres and artists.",
+            "src": "/category/music.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Entertainment: Musicals & Theatres",
+            "gradient": "bg-green-to-teal",
+            "description": "Trivia about stage productions and musicals.",
+            "src": "/category/music-theatre.jpg"
+        },
+        {
+            "id": 14,
+            "name": "Entertainment: Television",
+            "gradient": "bg-indigo-to-blue",
+            "description": "Questions about TV shows and actors.",
+            "src": "/category/television.jpg"
+        },
+        {
+            "id": 15,
+            "name": "Entertainment: Video Games",
+            "gradient": "bg-purple-to-pink",
+            "description": "Trivia on video games and gaming culture.",
+            "src": "/category/videogames.jpg"
+        },
+        {
+            "id": 16,
+            "name": "Entertainment: Board Games",
+            "gradient": "bg-orange-to-red",
+            "description": "Questions about popular board games.",
+            "src": "/category/boardgames.jpg"
+        },
+        {
+            "id": 17,
+            "name": "Science & Nature",
+            "gradient": "bg-gray-to-blue",
+            "description": "Trivia about natural phenomena and science.",
+            "src": "/category/nature.jpg"
+        },
+        {
+            "id": 18,
+            "name": "Science: Computers",
+            "gradient": "bg-cyan-to-purple",
+            "description": "Questions on computers and IT.",
+            "src": "/category/computer.jpg"
+        },
+        {
+            "id": 19,
+            "name": "Science: Mathematics",
+            "gradient": "bg-yellow-to-pink",
+            "description": "Trivia about math concepts and problems.",
+            "src": "/category/math.jpg"
+        },
+        {
+            "id": 20,
+            "name": "Mythology",
+            "gradient": "bg-blue-to-green",
+            "description": "Questions about myths and legends.",
+            "src": "/category/myth.jpg"
+        },
+        {
+            "id": 21,
+            "name": "Sports",
+            "gradient": "bg-red-to-pink",
+            "description": "Trivia about sports and athletes.",
+            "src": "/category/sports.jpg"
+        },
+        {
+            "id": 22,
+            "name": "Geography",
+            "gradient": "bg-lime-to-teal",
+            "description": "Questions on countries and landmarks.",
+            "src": "/category/geography.jpg"
+        },
+        {
+            "id": 23,
+            "name": "History",
+            "gradient": "bg-fuchsia-to-blue",
+            "description": "Trivia about historical events and figures.",
+            "src": "/category/history.jpg"
+        },
+        {
+            "id": 24,
+            "name": "Politics",
+            "gradient": "bg-rose-to-orange",
+            "description": "Questions about political systems and leaders.",
+            "src": "/category/politics.jpg"
+        },
+        {
+            "id": 25,
+            "name": "Art",
+            "gradient": "bg-blue-to-purple",
+            "description": "Trivia about visual arts and artists.",
+            "src": "/category/art.jpg"
+        },
+        {
+            "id": 26,
+            "name": "Celebrities",
+            "gradient": "bg-pink-to-orange",
+            "description": "Questions about famous personalities.",
+            "src": "/category/celebrity.jpg"
+        },
+        {
+            "id": 27,
+            "name": "Animals",
+            "gradient": "bg-teal-to-blue",
+            "description": "Trivia about animal species and habitats.",
+            "src": "/category/animals.jpg"
+        },
+        {
+            "id": 28,
+            "name": "Vehicles",
+            "gradient": "bg-red-to-yellow",
+            "description": "Questions about cars, bikes, and other vehicles.",
+            "src": "/category/vehicle.jpg"
+        },
+        {
+            "id": 29,
+            "name": "Entertainment: Comics",
+            "gradient": "bg-green-to-teal",
+            "description": "Trivia about comic books and graphic novels.",
+            "src": "/category/comics.jpg"
+        },
+        {
+            "id": 30,
+            "name": "Science: Gadgets",
+            "gradient": "bg-indigo-to-blue",
+            "description": "Questions about modern gadgets and technology.",
+            "src": "/category/gadgets.jpg"
+        },
+        {
+            "id": 32,
+            "name": "Entertainment: Cartoon & Animations",
+            "gradient": "bg-orange-to-red",
+            "description": "Questions about animated shows and cartoons.",
+            "src": "/category/cartoon.jpg"
+        }
+    ],
+    "Difficulties": ["Easy", "Medium", "Hard"],
+    "QuizType": ["Multiple Choice", "True / False"]
+}
