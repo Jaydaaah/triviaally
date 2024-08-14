@@ -50,7 +50,7 @@ export default function Profile() {
                         <LazyLoadImage
                             loading="lazy"
                             draggable={false}
-                            src="/triviaally/blank-dp.png"
+                            src="/blank-dp.png"
                         />
                     </div>
                 </motion.div>
