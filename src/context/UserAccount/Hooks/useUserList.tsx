@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { UserAccountContext } from "../UserAccountContext";
 
 
-export function useUserAccount() {
+export function useUserList() {
     const context = useContext(UserAccountContext);
 
     if (!context) {
@@ -10,11 +10,7 @@ export function useUserAccount() {
             `useUserAccount: ${context}, Can't retrieve UserAccount Context`
         );
     }
-    const {UserAccount} = context;
-    const [username, logout] = UserAccount;
+    const {UserList} = context;
 
-    return {
-        username,
-        logout,
-    };
+    return {UserList};
 }

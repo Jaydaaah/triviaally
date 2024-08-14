@@ -5,5 +5,9 @@ export interface UserAccount {
     src?: string;
 }
 export const UserAccountContext = createContext<
-    [UserAccount | undefined, () => void] | undefined
+    | {
+          UserAccount: [UserAccount | undefined, () => void];
+          UserList: UserAccount[];
+      }
+    | undefined
 >(undefined);

@@ -1,12 +1,14 @@
 import { ReactNode, useCallback, useEffect, useState } from "react";
 import { Leaderboard, LeaderboardContext } from "../LeaderboardContext";
 import { getDbScores } from "../../../db/UserScore";
+import { useUserList } from "../../UserAccount/Hooks/useUserList";
 
 interface props {
     children: ReactNode;
 }
 
 export default function LeaderboardProvider({ children }: props) {
+    const {UserList} = useUserList();
     const [overAll, setOverAll] = useState<Leaderboard[]>([]);
 
     const getScores = useCallback(
@@ -16,7 +18,7 @@ export default function LeaderboardProvider({ children }: props) {
             difficulty?: "easy" | "medium" | "hard";
         }) => {
             const map_leaderboards = new Map<string, Leaderboard>();
-            const category_scoreboard = await getDbScores({ ...filter });
+            const category_scoreboard = await getDbScores({ ...filter }, UserList);
 
             if (category_scoreboard) {
                 for (const {
@@ -46,7 +48,7 @@ export default function LeaderboardProvider({ children }: props) {
                 (a, b) => b.score - a.score // Sort by score in descending order
             );
         },
-        []
+        [UserList]
     );
 
     useEffect(() => {

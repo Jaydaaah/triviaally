@@ -7,7 +7,6 @@ import {
     QueryFieldFilterConstraint,
 } from "firebase/firestore";
 import { Database } from "../firebaseConfig";
-import { Profiles } from "../context/UserAccount/Profiles";
 
 export async function addDbScore(
     name: string,
@@ -42,21 +41,26 @@ interface filter {
     difficulty?: string;
 }
 
-const filler = Profiles.map(({ name }) => {
-    return {
-        timestamp: 0,
-        category: "",
-        difficulty: "easy",
-        name,
-        score: 0,
-    };
-});
+function createFiller(profiles: { name: string }[]) {
+    return profiles.map(({ name }) => {
+        return {
+            timestamp: 0,
+            category: "",
+            difficulty: "easy",
+            name,
+            score: 0,
+        };
+    });
+}
 
-export async function getDbScores({ name, category, difficulty }: filter) {
+export async function getDbScores(
+    { name, category, difficulty }: filter,
+    filler?: { name: string }[]
+) {
     const constraints: QueryFieldFilterConstraint[] = [];
     if (name) {
         constraints.push(where("name", "==", name));
-    } 
+    }
 
     if (category) {
         constraints.push(where("category", "==", category));
@@ -89,7 +93,11 @@ export async function getDbScores({ name, category, difficulty }: filter) {
                 score,
             };
         });
-        return [...docs, ...filler];
+        if (filler) {
+            return [...docs, ...createFiller(filler)];
+        } else {
+            return docs;
+        }
     } catch (error) {
         console.error(error);
     }
