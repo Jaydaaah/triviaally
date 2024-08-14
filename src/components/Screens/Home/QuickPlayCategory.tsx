@@ -61,7 +61,7 @@ export default function QuickPlayCategory({ index, currentIndex, description, na
                         }
                     >
                         <LazyLoadImage
-                            src={src}
+                            src={`/triviaally/${src}`}
                             loading="lazy"
                             draggable={false}
                             className="object-cover w-full h-full"

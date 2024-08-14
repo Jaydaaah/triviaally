@@ -38,7 +38,7 @@ export default function CategoryCard({ src, name, description }: Props) {
                             <div className="skeleton h-64 w-[400px]"></div>
                         }
                     >
-                        <LazyLoadImage width={400} src={src} loading="lazy" />
+                        <LazyLoadImage width={400} src={`/triviaally/${src}`} loading="lazy" />
                     </Suspense>
                 </figure>
                 <div className="card-body w-full">
